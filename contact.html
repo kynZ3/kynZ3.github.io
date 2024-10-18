@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metadata for the webpage -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="with=device-width,  initial-scale=1.0">
+    <title> CheetahXD - Christian Dixon</title><!-- Title that appears on the browser tab -->
+    <!-- Links the CSS file for styling -->
+    <link rel="stylesheet" href="style1.css">
+    <!-- Preconnect to Google's font server to improve loading performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- Links Google Font 'PT Serif' to use in the website -->
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main><!-- Main content area for the page -->
+
+<!-- Header section at the top of the page with navigation-->
+        <section class="sub-header2">
+        <nav>
+            <!-- Logo that links to the homepage -->
+            <a href="index.html"><img src="pictures/logo.png" alt="Logo"></a>
+            <!-- Navigation links for each of the sections of the website -->
+            <div class="nav-links">
+                 <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="aboutMe.html">ABOUT ME</a></li>
+                    <li><a href="football.html">FOOTBALL</a></li>
+                    <li><a href="track.html">TRACK</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="sub-title2"><!--subtitle for Contact Me page -->
+            <h1>Contact Me</h1><!-- Main heading-->
+        </div>
+
+    </section>
+
+<!-- Container for the contact form and location map -->
+<div class="contact-location-container">
+<section class="location">
+    <!-- display hometown with an embedded Google Map -->
+    <h2>Home Town</h2>
+    <!-- The iframe embeds a Google Map of Charlotte, NC, providing visual context for the user's hometown -->
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d208648.5184583561!2d-80.83982895!3d35.20315345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88541fc4fc381a81%3A0x884650e6bf43d164!2sCharlotte%2C%20NC!5e0!3m2!1sen!2sus!4v1729218936466!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</section>
+
+        <!-- Section for the contact form where users can send messages -->
+        <section class="contact-me">
+            
+            <div class="contact">
+                <!-- Form for users to input their contact information -->
+                <form action="process_form.php" method="post"><!-- Specifies the action for form submission -->
+                    <input type="text" placeholder="Your Name" required> <!-- Input field for the user's name -->
+                    <input type="email" placeholder="Your Email" required><!-- Input field for the user's email -->
+                    <input type="text" placeholder="Subject" required><!-- Input field for the subject of the message -->
+                    <textarea rows="8" placeholder="Your Message" required></textarea><!-- Text area for the message body -->
+                    <button type="submit" class="send-btn">Send Message</button> <!-- Submit button to send the form -->
+                </form>
+            
+
+            </div>
+
+        </section>
+</div>
+
+
+    
+</main>
+
+
+<footer> <!-- Footer section at the bottom of each page -->
+
+    <section class="footer1">
+    <h4>Contact Me</h4> <!-- heading for contact information -->
+    <p>Email: cheetahXD@gmail.com <br> Phone: 704-888-9867</p><!-- Contact details -->
+    </section>
+        &copy;2024 CheetahXD.<br><!-- Copyright notice -->
+        All rights reserved.<br><br>
+
+        <!-- Links for validating HTML and CSS -->
+        <a href="https://validator.w3.org/check?uri=referer"
+        referrerpolicy="unsafe-url"> Validate HTML </a> <br>
+        <a href="https://jigsaw.w3.org/css-validator/check/referer"
+        referrerpolicy="unsafe-url"> Validate CSS </a>
+
+</footer>
+
+</body>
+
+
+</html>
