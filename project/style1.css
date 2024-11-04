@@ -1,0 +1,454 @@
+*{/*Reseting all elements*/
+    margin:0;
+    padding: 0;   
+    font-family: "PT Serif", serif;
+}
+/* Styling for regular weight PT Serif font */
+.pt-serif-regular {
+  font-family: "PT Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+/* Styling for bold weight PT Serif font */
+.pt-serif-bold {
+  font-family: "PT Serif", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+/* Header styling ie Set minimum height to 150 of the viewport height, using flexbox layout, arranging 
+items in a column, and setting background */
+.header{
+    min-height: 150vh;
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(pictures/Cyearbook.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+/* Styles the navigation bar */
+nav{
+    display: flex; /* Enables Flexbox layout for the navigation bar, allowing easy alignment of child elements */
+    padding: 2% 6%; /* Adds padding around the navigation bar for spacing, using percentages for responsiveness */
+    justify-content: space-between; /* Distributes space between child elements, placing them at the far left and right */
+    align-items: center; /* Vertically centers the items within the navigation bar */
+
+}
+/* Styles the logo image within the navigation bar */
+nav img{
+    width: 130px;/* Sets the logo width to a fixed size to maintain consistent appearance */
+
+}
+
+/* Styles the container for navigation links */
+.nav-links{
+    flex: 1; /* Allows the navigation links to grow and fill available space */
+    text-align: right; /* Aligns the navigation links to the right side of the container */
+    display: flex; /* Uses Flexbox for horizontal alignment of links */
+    justify-content: flex-end; /* Ensures that the links are pushed to the right end */
+
+}
+
+/* Styles each list item (link) within the navigation */
+.nav-links ul li{
+    list-style: none; /* Removes the default bullet points */
+    display: inline-block; /* Makes the list items appear in a row */
+    padding: 8px 12px; /* Adds padding around each link for better spacing */
+    position: relative; /* Sets up positioning context for child elements like pseudo-elements */
+
+}
+
+/* Styles the anchor tags (links) inside each navigation list item */
+.nav-links ul li a{
+    color:#fff;
+    text-decoration: none;/* Removes the underline from the links */
+    font-size: 14px;
+
+}
+/* Adds an animated underline effect */
+.nav-links ul li::after{
+    content: ''; /* Creates a pseudo-element for the underline effect */
+    width: 0%; /* Starts with a zero-width underline */
+    height: 2px; /* Sets the thickness of the underline */
+    background: #f44336; /* Colors the underline red */
+    display: block; /* Displays the pseudo-element as a block */
+    margin: auto; /* Centers the underline within the element */
+    transition: 0.7s; /* Smoothly animates the width change */
+}
+
+/* Expands the underline to full width when hovering over the link */
+.nav-links ul li:hover::after{
+    width:100%;
+}
+/*Introduction to home page, centers and increases text*/
+.text-box{
+    width: 90%;  /* Sets the text box to occupy 90% of the available width */
+    color: #fff;
+    position:absolute; /* Positions the text box absolutely within its parent */
+    top:50%; /* Moves the text box down to 50% from the top */
+    left: 50%; /* Moves the text box to the center horizontally */
+    transform: translate(-50%,-50%);/* Perfectly centers the text box */
+    text-align: center;/* Aligns the text content to the center */
+}
+
+
+.text-box h1{ /* Styles the main heading inside the text box */
+    font-size:62px;
+
+}
+.text-box p{ /* Styles the paragraph inside the text box */
+    margin:10px 0 40px; /* Adds margin to separate the paragraph from other elements */
+    font-size: 20px;
+    color: ghostwhite;
+}
+
+
+.learn-btn{/* Styles the "Learn More" button */
+    display: inline-block; /* Makes the button an inline-block for padding */
+    text-decoration: none; /* Removes any underline from the button text */
+    color:ghostwhite;
+    border: 2px solid gold; /* Adds a gold border around the button */
+    padding: 12px 34px; /* Adds padding inside the button for spacing */
+    font-size:15px;
+    background: transparent;
+    position: relative;
+    cursor:pointer;/* Changes the cursor to a pointer on hover */
+}
+
+.learn-btn:hover{ /* Styles the button on hover */
+    border:2px solid gold; /* Maintains the gold border on hover */
+    background: gold; /* Changes the background to gold on hover */
+    transition: 1s; /* Animates the color change over 1 second */
+}
+
+
+
+/* Home */
+
+/* Home section styling gives the main content area a centered and balanced layout,
+ensuring it fits well on the screen. The content is placed in the center of the page with 
+some extra space at the top to create a visually appealing introduction. */
+
+.home{
+    width:80%;
+    margin: auto;
+    text-align:center;
+    padding-top: 100px;
+}
+
+/* Styling for main headings provides a bold, prominent look that draws attention,
+ giving the titles more emphasis and making them stand out from other 
+ text on the page. */
+h1{
+    font-size:40px;
+    font-weight:600;
+
+}
+
+/* Paragraph styling enhances readability using with line spacing that makes long 
+sections of text more approachable. */
+p{
+    color: black;
+    font-size:18px;
+    font-weight: 300;
+    line-height: 40px;
+    padding: 25px;
+}
+
+/* The row class uses Flexbox to arrange content in a horizontal line.
+Automatically adjusting the spacing between items as needed. */
+
+.row{
+    margin-top:5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Styling for the q-back class creates a visually distinct card or box for 
+content. The rounded corners and padding give a softer, more inviting look,
+while the light background helps highlight the content inside. */
+.q-back{
+    flex-basis: 48%;
+    background: #fff3f3;
+    border-radius:10px;
+    margin-bottom: 5%;
+    padding:40px 20px;
+    box-sizing:border-box;
+}
+
+/* Styling for the heading */
+.q-back h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+/* Styles items within the q-back sections appear as traditional bulleted lists */
+.q-back ul {
+    list-style-type: disc; 
+    padding-left: 20px;
+
+}
+
+
+.q-back li {
+    font-size: 18px;
+    color: black;
+    line-height: 1.6; /* Increases spacing between list items */
+    margin-bottom: 10px; /* Adds space below each list item */
+}
+
+
+h3{
+    text-align:center;
+    font-weight:600;
+    font-size: 25px;
+    margin: 10px 0;
+
+}
+/* Footer section styling gives the footer a full-width layout, 
+centered text, and padding.*/
+.footer1{
+    width:100%;
+    text-align: center;
+    padding: 30px 0;
+
+}
+/* Styles headings text to stand out */
+.footer1 h4{
+    margin-bottom: 15px;
+    margin-top:20px;
+    font-weight: 600;
+    font-size: 20px;
+}
+footer{
+    text-align: center;
+}
+
+
+
+
+/*Start of About Me page*/
+
+/*.sub-header class styles the introductory header section:
+ It takes up the full viewport height and displays a background image with a gradient overlay;
+ flexbox layout centers the content and stacks it vertically */
+
+.sub-header{
+    height:100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(pictures/wood1.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color:ghostwhite;
+    display:flex;
+    flex-direction: column;
+}
+
+
+.sub-header h1{
+    margin-top: 150px;/*adjusts the top margin to create space above the heading.*/
+}
+
+/*centered in the viewport using absolute positioning and a transform for alignment */
+.sub-title{
+    width: 90%;
+    color: #fff;
+    position:absolute;
+    top:40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    flex-direction: column;
+
+}
+
+/* .about-me class centers the main content on the About Me page, giving padding at the top and bottom 
+to create balanced spacing */
+
+.about-me{
+    width:80%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+
+}
+/* each section has a set width and padding, with a background color to differentiate it from other content;
+rounded corners and a boxed layout */
+.about{  
+    flex-basis: 31%;
+    padding:30px 2px;
+    background: #c7897b;
+    border-radius:10px;
+    margin-bottom: 5%;
+    box-sizing:border-box;
+}
+/*images take up the full width of their container */
+.about img{
+    width: 100%;
+}
+.about h1 {
+    background-color: #444; /* Set background color for the h1 */
+    color: #fff; 
+    padding: 10px 15px; 
+    border-radius: 8px; /* border-radius for rounded corners */
+    text-align: center;
+    font-weight: 600;
+    font-size: 25px;
+    margin: 20px 0; /* Adjust margin for spacing */
+}
+
+/* The .about p styles paragraphs in the about sections, with 
+larger line spacing; padding around the text makes the content less cramped. */
+.about p{
+    font-size:18px;
+    font-weight: 300;
+    line-height: 40px;
+    padding: 25px;
+}
+
+
+/*Desgin of Football Page */
+
+/* this class styles the header section, covering the full viewport with a background image that has a gradient overlay;
+Flexbox ensurs that the content remains centered. */
+
+.sub-header3 {
+    min-height: 100vh;
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(pictures/football2.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+
+/* Styling for the football videos section:  uses Flexbox to stack video items in a column layout,
+aligning them in the center of the page, with spacing between each item making the layout more organized */
+.football-videos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin: 40px 0;
+}
+
+/* this class centers individual video items, ensuring they fit within a set maximum width. This styling helps maintain 
+consistency across different video elements and ensures they don't get too large on wide screens. */
+.video-item {
+    text-align: center;
+    max-width: 560px; /* Match the video width */
+}
+
+/*.video-item p styles the descriptions for each video, giving them a larger font size and 
+a color to help them stand out. */
+.video-item p {
+    font-size: 22px;
+    color: #af2101;
+    margin-bottom: 20px;
+}
+
+
+
+/* Desgin of Contact Page */
+
+.sub-header2 {
+    /* Set the height to cover the full viewport */
+    height: 100vh;
+    /* Make the width 100% of the viewport */
+    width: 100%;
+    /* Apply a background image with a gradient overlay */
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(pictures/grad2.jpg);
+    /* Center the background image */
+    background-position: center;
+    /* Make the background image cover the entire container */
+    background-size: cover;
+    /* Center the text inside the container */
+    text-align: center;
+    /* Set the text color to ghostwhite */
+    color: ghostwhite;
+    /* Enable Flexbox layout for this section */
+    display: flex;
+    /* Stack Flexbox items (children) vertically */
+    flex-direction: column;
+}
+
+.sub-title2 {
+    /* Set the width to 90% of the parent container */
+    width: 90%;
+    /* Set the text color to white */
+    color: #fff;
+    /* Position the element absolutely within its parent */
+    position: absolute;
+    /* Move the element down to 40% from the top of the parent */
+    top: 40%;
+    /* Center the element horizontally at 50% from the left */
+    left: 50%;
+    /* Adjust the element's position to the left and up by half its own width and height */
+    transform: translate(-50%, -50%);
+    /* Center the text inside the element */
+    text-align: center;
+    /* Stack the content within the element in a column direction */
+    flex-direction: column;
+}
+
+.contact-location-container {
+    display: flex; /* Enable Flexbox */
+    flex-direction: column; /* Stack items vertically by default */
+    width: 90%; /* Set a reasonable width for the container */
+    margin: 20px auto; /* Center the container */
+    gap: 20px; /* Add space between the items */
+}
+
+/* Apply Flexbox settings for larger screens */
+@media (min-width: 768px) {
+    .contact-location-container {
+        flex-direction: row; /* Display items side-by-side on larger screens */
+        justify-content: space-between; /* Space out the items */
+        align-items: flex-start; /* Align items to the top */
+    }
+}
+
+.location {
+    flex: 1; /* Allow the map section to take available space */
+    min-width: 300px; /* Minimum width to ensure it doesn’t shrink too much */
+}
+
+.contact-me {
+    flex: 1; /* Allow the contact section to take available space */
+    min-width: 300px; /* Minimum width to ensure it doesn’t shrink too much */
+}
+
+/* Optional styling for better appearance */
+.contact-me .contact {
+    padding: 20px; /* Add padding around the form */
+    background-color: #c7897b; /* Background color for the form */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+.contact input,
+.contact textarea {
+    /* Set the width to 90% of the parent container */
+    width: 90%;
+    /* Add padding inside the input fields for better spacing */
+    padding: 15px;
+    /* Add space below each input field */
+    margin-bottom: 17px;
+    /* Remove the default outline on focus */
+    outline: none;
+    /* Add a border with a light color */
+    border: 1px solid #ccc;
+}
+
+
+
+
+
+
+
+
+
