@@ -2,116 +2,114 @@
 <html lang="en">
 <head>
     <!-- Metadata for the webpage -->
-
     <meta charset="UTF-8">
-    <meta name="viewport" content="with=device-width,  initial-scale=1.0">
-    <title> CheetahXD - Christian Dixon</title>
-<!-- Linking the CSS file for styling -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CheetahXD - Christian Dixon</title>
+
+    <!-- Linking the CSS file for styling -->
     <link rel="stylesheet" href="style1.css">
 
-<!-- Preconnect to Google's font server to improve loading performance -->
+    <!-- Preconnect to Google's font server to improve loading performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<!-- Linking Google Font 'PT Serif' to use in the website -->
-<link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Linking Google Font 'PT Serif' to use in the website -->
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
 
-<!-- Include jQuery -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
+    <!-- Include Slick Carousel Plugin -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
-<!-- Include Slick Carousel Plugin -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
-<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
-<!-- Include jQuery UI -->
-<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-
-
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>    
+    <!-- Include jQuery UI -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 </head>
 <body>
-    <main>    <!-- Main content area for the page -->
+    <main> <!-- Main content area for the page -->
 
+        <!-- Header section at the top of the page with navigation -->
+        <section class="header">
+            <nav>
+                <!-- Logo that links to the homepage -->
+                <a href="index.html"><img src="pictures/logo.png" alt="Logo"></a>
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="aboutMe.html">ABOUT ME</a></li>
+                        <li><a href="football.html">FOOTBALL</a></li>
+                        <li><a href="track.html">TRACK</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="text-box">
+                <h1>Meet CheetahXD</h1>
+                <p>Welcome Everyone! My name is Christian X. Dixon but my friends know me as Cheetah.</p>
+                <a href="" class="learn-btn">Learn more about me</a>
+            </div> 
+        </section>
 
-<!-- Header section at the top of the page with navigation-->
+        <!-- Home Section -->
+        <section class="home">
+            <h1>Meet Cheetah</h1>
+            <p>Thank You for visiting. Continue reading to learn more about me!</p>
 
-    <section class="header">
-        <nav>
-            <!-- Logo that links to the homepage -->
-            <a href="index.html"><img src="pictures/logo.png" alt="Logo"></a>
-            <div class="nav-links"><!-- Navigation links for each of the sections of the website -->
-                <ul>
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="aboutMe.html">ABOUT ME</a></li>
-                    <li><a href="football.html">FOOTBALL</a></li>
-                    <li><a href="track.html">TRACK</a></li>
-                    <li><a href="contact.html">CONTACT</a></li>
-                </ul>
-            </div>
-        </nav>
+            <!-- Carousel Section -->
+            <section class="carousel-container">
+                <h2 class="carousel-title">Highlights</h2>
+                <div class="carousel">
+                    <div class="slide">
+                        <h3>Quick Background</h3>
+                        <p>Christian Dixon has been an athlete since his early years, excelling in both football and track.</p>
+                    </div>
+                    <div class="slide">
+                        <h3>Current Accomplishments</h3>
+                        <p>Ranked #9 in the U.S. for track and a 3x State Champion.</p>
+                    </div>
+                    <div class="slide">
+                        <h3>Goals</h3>
+                        <p>Aiming to continue breaking records in track and field while excelling academically.</p>
+                    </div>
+                </div>
+            </section>
 
-
-<div class="text-box"> <!-- Text box with introductory information about CheetahXD-->
-
-    <h1>Meet CheetahXD</h1><!--Main heading for the intro-->
-    <p>Welcome Everyone! My name is Christian X. Dixon but my friends know me as Cheetah.</p><!-- Intro text -->
-    <a href="" class="learn-btn">Learn more about me</a><!-- Button that could link to information -->
-</div> 
-    </section>
-
-<!--Home Page-->
-
-<section class="home">
-    <h1> Meet Cheetah</h1><!-- Heading introducing the home section-->
-    <p>Thank You for visiting. Continue reading to learn more about me!</p> 
-
-<!-- Carousel Section -->
-        <section class="carousel-container">
-            <h2 class="carousel-title">Highlights</h2>
-            <div class="carousel">
-                <div class="slide">
+            <!-- Row containing background information and accomplishments -->
+            <div class="row">
+                <div class="q-back">
                     <h3>Quick Background</h3>
-                    <p>Christian Dixon has been an athlete since his early years, excelling in both football and track.</p>
+                    <p>Christian Dixon, also known as “Cheetah,” has been an athlete since his early years. He began playing football in 5th grade and discovered his passion for track in 2016 when he joined the Charlotte Heat Track Club. Since then, he has excelled in both sports, earning numerous accolades and setting his sights on even greater achievements.</p>
                 </div>
-                <div class="slide">
+                <div class="q-back">
                     <h3>Current Accomplishments</h3>
-                    <p>Ranked #9 in the U.S. for track and a 3x State Champion.</p>
-                </div>
-                <div class="slide">
-                    <h3>Goals</h3>
-                    <p>Aiming to continue breaking records in track and field while excelling academically.</p>
+                    <ul>
+                        <li>Senior in high school</li>
+                        <li>Ranked #9 in the U.S. for the Class of 2025 in track</li>
+                        <li>3x State Champion in track</li>
+                        <li>Recipient of the Charlotte Track and Field Award (Sprinter of the Year)</li>
+                        <li>Turf Kings Southeast Invitational MVP</li>
+                    </ul>
                 </div>
             </div>
         </section>
-    
-<!--Row containing background information and accomplishments-->
-    <div class="row">
-        <div class="q-back">
-            <h3>Quick Background</h3><!-- Subheading for background section -->
-            <p>Christian Dixon, also known as “Cheetah,” has been an athlete since his early years. He began playing football in 5th grade and discovered his passion for track in 2016 when he joined the Charlotte Heat Track Club. Since then, he has excelled in both sports, earning numerous accolades and setting his sights on even greater achievements.</p>
-        </div>
-        <div class="q-back">
-            <h3>Current Accomplishments</h3> <!-- Subheading-->
-            <ul>
-                <!-- List of accomplishments -->
-                <li>Senior in high school</li>
-                <li>Ranked #9 in the U.S. for the Class of 2025 in track</li>
-                <li>3x State Champion in track</li>
-                <li>Recipient of the Charlotte Track and Field Award 
-                (Sprinter of the Year)</li>
-                <li>Turf Kings Southeast Invitational MVP</li>
-            </ul> 
-        </div>
-        
-    </div>
+    </main>
 
-</section>
-</main>
+    <!-- Footer section at the bottom of each page -->
+    <footer>
+        <section class="footer1">
+            <h4>Contact Me</h4>
+            <p>Email: cheetahXD@gmail.com <br> Phone: 704-888-9867</p>
+        </section>
+        &copy;2024 CheetahXD.<br>All rights reserved.<br><br>
+        <a href="https://validator.w3.org/check?uri=referer" referrerpolicy="unsafe-url">Validate HTML</a><br>
+        <a href="https://jigsaw.w3.org/css-validator/check/referer" referrerpolicy="unsafe-url">Validate CSS</a>
+    </footer>
 
-   <script>
-        // Initialize Slick Carousel
+    <!-- Initialize Slick Carousel -->
+    <script>
         $(document).ready(function() {
             $('.carousel').slick({
                 dots: true,
@@ -122,26 +120,5 @@
             });
         });
     </script>
-    
-
-<footer> <!-- Footer section at the bottom of each page -->
-
-    <section class="footer1">
-    <h4>Contact Me</h4> <!-- heading for contact information -->
-    <p>Email: cheetahXD@gmail.com <br> Phone: 704-888-9867</p><!-- Contact details -->
-    </section>
-        &copy;2024 CheetahXD.<br><!-- Copyright notice -->
-        All rights reserved.<br><br>
-
-        <!-- Links for validating HTML and CSS -->
-        <a href="https://validator.w3.org/check?uri=referer"
-        referrerpolicy="unsafe-url"> Validate HTML </a> <br>
-        <a href="https://jigsaw.w3.org/css-validator/check/referer"
-        referrerpolicy="unsafe-url"> Validate CSS </a>
-
-</footer>
-
 </body>
-
-
 </html>
