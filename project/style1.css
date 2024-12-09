@@ -467,46 +467,34 @@ a color to help them stand out. */
 
 
 /* Desgin of Contact Page */
-
 .sub-header2 {
-    /* Set the height to cover the full viewport */
-    height: 100vh;
-    /* Make the width 100% of the viewport */
+    min-height: 100vh;
     width: 100%;
-    /* Apply a background image with a gradient overlay */
-    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(pictures/grad2.jpg);
-    /* Center the background image */
-    background-position: center;
-    /* Make the background image cover the entire container */
+    display:flex;
+    flex-direction: column;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(pictures/grad2.jpg);
     background-size: cover;
-    /* Center the text inside the container */
+    background-position: center;
+    position: relative;
     text-align: center;
-    /* Set the text color to ghostwhite */
     color: ghostwhite;
-    /* Enable Flexbox layout for this section */
-    display: flex;
-    /* Stack Flexbox items (children) vertically */
+
+
+}
+.sub-title2{
+    width: 90%;
+    color: #fff;
+    position:absolute;
+    top:40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
     flex-direction: column;
 }
 
-.sub-title2 {
-    /* Set the width to 90% of the parent container */
-    width: 90%;
-    /* Set the text color to white */
-    color: #fff;
-    /* Position the element absolutely within its parent */
-    position: absolute;
-    /* Move the element down to 40% from the top of the parent */
-    top: 40%;
-    /* Center the element horizontally at 50% from the left */
-    left: 50%;
-    /* Adjust the element's position to the left and up by half its own width and height */
-    transform: translate(-50%, -50%);
-    /* Center the text inside the element */
-    text-align: center;
-    /* Stack the content within the element in a column direction */
-    flex-direction: column;
-}
+
+
+
 
 .contact-location-container {
     display: flex; /* Enable Flexbox */
@@ -535,7 +523,7 @@ a color to help them stand out. */
     min-width: 300px; /* Minimum width to ensure it doesn’t shrink too much */
 }
 
-/* Optional styling for better appearance */
+
 .contact-me .contact {
     padding: 20px; /* Add padding around the form */
     background-color: #c7897b; /* Background color for the form */
@@ -618,3 +606,24 @@ a color to help them stand out. */
 }
 
 
+/* Styling for track page */
+.sub-header4 {
+    min-height: 100vh;
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(pictures/track4.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.sub-title4{
+    width: 90%;
+    color: #fff;
+    position:absolute;
+    top:40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    flex-direction: column;
+}
