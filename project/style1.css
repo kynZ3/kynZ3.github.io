@@ -557,6 +557,28 @@ a color to help them stand out. */
     border: 1px solid #ccc;
 }
 
+/* Styling for quote */
+#quote-section {
+    text-align: center;
+    margin: 20px;
+}
+
+#quote {
+    font-size: 1.5em;
+    font-style: italic;
+}
+
+#author {
+    font-size: 1.2em;
+    color: gray;
+}
+
+#fetchQuoteBtn {
+    padding: 10px 20px;
+    font-size: 1em;
+}
+
+
 /* Search Bar Styling */
 .search-bar {
     width: 80%; /* Adjust the width as per your layout */
@@ -594,3 +616,5 @@ a color to help them stand out. */
 #search-btn:hover {
     background-color: #d32f2f; /* Darker background color on hover */
 }
+
+

@@ -3,7 +3,7 @@
 <head>
     <!-- Metadata for the webpage -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="with=device-width,  initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,  initial-scale=1.0">
     <title> CheetahXD - Christian Dixon</title><!-- Title that appears on the browser tab -->
     <!-- Links the CSS file for styling -->
     <link rel="stylesheet" href="style1.css">
@@ -12,6 +12,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <!-- Links Google Font 'PT Serif' to use in the website -->
 <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+
+
+
 </head>
 <body>
     <main><!-- Main content area for the page -->
@@ -33,7 +36,7 @@
             </div>
         </nav>
 
-        <div class="sub-title2"><!--subtitle for Contact Me page -->
+        <div class="sub-header2"><!--subtitle for Contact Me page -->
             <h1>Contact Me</h1><!-- Main heading-->
         </div>
 
@@ -60,9 +63,18 @@
                     <textarea rows="8" placeholder="Your Message" required></textarea><!-- Text area for the message body -->
                     <button type="submit" class="send-btn">Send Message</button> <!-- Submit button to send the form -->
                 </form>
-            
-
             </div>
+
+            <div id="quote-section">
+                <br><br><br>
+                <h2>Motivational Quote</h2>
+                <p id="quote">Click the button to get a motivational quote!</p>
+                <p id="author"></p>
+                <button id="fetchQuoteBtn">Get Inspired</button>
+            </div>
+
+
+
 
         </section>
 </div>
@@ -88,6 +100,9 @@
         referrerpolicy="unsafe-url"> Validate CSS </a>
 
 </footer>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="./javaScript.js"></script>
 
 </body>
 
