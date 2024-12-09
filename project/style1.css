@@ -444,6 +444,50 @@ a color to help them stand out. */
     border: 1px solid #ccc;
 }
 
+/* Search Bar Styling */
+.search-bar {
+    width: 80%; /* Adjust the width as per your layout */
+    margin: 20px auto; /* Center the search bar with vertical spacing */
+    text-align: center; /* Center the text and button alignment */
+    display: flex; /* Use flexbox for aligning input and button */
+    gap: 10px; /* Add spacing between the input and button */
+}
+
+#search-input {
+    flex: 1; /* Allow the input field to take most of the space */
+    padding: 10px 15px; /* Add padding for better spacing */
+    font-size: 16px; /* Increase font size for readability */
+    border: 1px solid #ccc; /* Light border for the input field */
+    border-radius: 4px; /* Rounded corners */
+    outline: none; /* Remove focus outline */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for a polished look */
+}
+
+#search-input:focus {
+    border-color: #f44336; /* Highlight border on focus */
+}
+
+#search-btn {
+    padding: 10px 20px; /* Add padding for size */
+    font-size: 16px; /* Increase font size for readability */
+    color: #fff; /* White text color */
+    background-color: #f44336; /* Button background color */
+    border: none; /* Remove default border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+#search-btn:hover {
+    background-color: #d32f2f; /* Darker background color on hover */
+}
+
+
+
+
+
+
+
 
 
 
