@@ -206,6 +206,47 @@ h3{
     margin: 10px 0;
 
 }
+
+
+/* Carousel Section */
+.carousel-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.carousel-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.carousel {
+    margin: 0 auto;
+    width: 80%;
+    max-width: 600px;
+}
+
+.slide {
+    padding: 20px;
+    background: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.slide h3 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.slide p {
+    font-size: 1rem;
+    color: #555;
+}
+
+
+
+
 /* Footer section styling gives the footer a full-width layout, 
 centered text, and padding.*/
 .footer1{
