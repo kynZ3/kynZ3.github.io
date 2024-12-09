@@ -211,24 +211,21 @@ h3{
 /* Carousel Section */
 .carousel-container {
     text-align: center;
-    padding: 20px;
-    background-color: #f9f9f9;
-}
-
-.carousel-title {
-    font-size: 2rem;
-    margin-bottom: 20px;
+    padding: 10px; /* Reduced padding to shrink the length */
+    background-color: #fff3f3; /* Same color as "Quick Background" and "Current Accomplishments" sections */
+    border-radius: 10px; /* Optional for a consistent look with other sections */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional for a subtle shadow effect */
 }
 
 .carousel {
     margin: 0 auto;
-    width: 80%;
-    max-width: 600px;
+    width: 70%; /* Adjust the width for a smaller appearance */
+    max-width: 500px; /* Limit maximum size for consistency */
 }
 
 .slide {
     padding: 20px;
-    background: #f4f4f4;
+    background: #fff3f3; /* Same background color */
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -244,6 +241,37 @@ h3{
     color: #555;
 }
 
+.datepicker-section {
+    text-align: center;
+    padding: 15px 20px; /* Add balanced padding for neatness */
+    background-color: #fff3f3; /* Matches the "Quick Background" and carousel color */
+    border-radius: 8px; /* Slightly rounded corners for a clean look */
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for polish */
+    width: 80%; /* Keep it slightly larger for emphasis */
+    margin: 20px auto; /* Center it and add vertical spacing */
+}
+
+.datepicker-section h2 {
+    font-size: 1.8rem; /* Slightly larger heading for emphasis */
+    color: #333; /* Consistent with other headings */
+    margin-bottom: 10px; /* Space below the heading */
+}
+
+.datepicker-section p {
+    font-size: 1rem;
+    color: #555; /* Softer color for readability */
+    margin-bottom: 10px; /* Space below the paragraph */
+}
+
+#datepicker {
+    padding: 10px; /* Adds space inside the input field */
+    font-size: 1rem; /* Matches the text size with other inputs */
+    border: 1px solid #ccc; /* Clean, light border */
+    border-radius: 4px; /* Subtle rounded edges for neatness */
+    width: 60%; /* Keeps the input field proportionate */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow for a clean look */
+    margin-top: 10px; /* Space above the input field */
+}
 
 
 
@@ -522,7 +550,6 @@ a color to help them stand out. */
 #search-btn:hover {
     background-color: #d32f2f; /* Darker background color on hover */
 }
-
 
 
 
