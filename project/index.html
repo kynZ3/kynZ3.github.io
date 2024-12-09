@@ -34,7 +34,6 @@
         <!-- Header section at the top of the page with navigation -->
         <section class="header">
             <nav>
-                <!-- Logo that links to the homepage -->
                 <a href="index.html"><img src="pictures/logo.png" alt="Logo"></a>
                 <div class="nav-links">
                     <ul>
@@ -57,6 +56,13 @@
         <section class="home">
             <h1>Meet Cheetah</h1>
             <p>Thank You for visiting. Continue reading to learn more about me!</p>
+
+            <!-- jQuery UI Datepicker -->
+            <section class="datepicker-section">
+                <h2>Schedule a Meet & Greet</h2>
+                <p>Choose a date to meet CheetahXD:</p>
+                <input type="text" id="datepicker" placeholder="Click to select a date">
+            </section>
 
             <!-- Carousel Section -->
             <section class="carousel-container">
@@ -108,9 +114,10 @@
         <a href="https://jigsaw.w3.org/css-validator/check/referer" referrerpolicy="unsafe-url">Validate CSS</a>
     </footer>
 
-    <!-- Initialize Slick Carousel -->
+    <!-- Initialize Slick Carousel and jQuery UI Datepicker -->
     <script>
         $(document).ready(function() {
+            // Initialize Slick Carousel
             $('.carousel').slick({
                 dots: true,
                 infinite: true,
@@ -118,6 +125,9 @@
                 slidesToShow: 1,
                 adaptiveHeight: true
             });
+
+            // Initialize Datepicker
+            $("#datepicker").datepicker();
         });
     </script>
 </body>
