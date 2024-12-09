@@ -36,11 +36,17 @@
             </div>
         </section>
 
+        <!-- Search and Filter Section -->
+        <section class="search-bar">
+            <input type="text" id="search-input" placeholder="Search by opponent or description...">
+            <button id="search-btn">Search</button>
+        </section>
+
         <!-- Football Highlights Carousel Section -->
         <section class="carousel-container">
             <h2 class="carousel-title">Cheetah in Action: Football Highlights</h2>
             <div class="carousel">
-                <div class="slide">
+                <div class="slide" data-keywords="prince ave amazing speed agility victory">
                     <video width="100%" controls>
                         <source src="Fvideos/F1.mp4" type="video/mp4">
                         Your browser does not support the video tag.
@@ -48,7 +54,7 @@
                     <h3>Mallard Creek vs Prince Ave</h3>
                     <p>Amazing play from this season. Watch CheetahXD show his speed and agility on the field as he helped Creek come back to get the victory over Prince Ave.</p>
                 </div>
-                <div class="slide">
+                <div class="slide" data-keywords="grayson state champs speed defense hard work">
                     <video width="100%" controls>
                         <source src="Fvideos/F4.mp4" type="video/mp4">
                         Your browser does not support the video tag.
@@ -56,7 +62,7 @@
                     <h3>Mallard Creek vs Grayson</h3>
                     <p>Creek goes up against State Champs, Grayson. Watch CheetahXD use his speed against their intense defense. Hard work pays off!</p>
                 </div>
-                <div class="slide">
+                <div class="slide" data-keywords="hopewell game-winning touchdown last seconds conference">
                     <video width="100%" controls>
                         <source src="Fvideos/F3.mp4" type="video/mp4">
                         Your browser does not support the video tag.
@@ -79,17 +85,59 @@
         <a href="https://jigsaw.w3.org/css-validator/check/referer" referrerpolicy="unsafe-url">Validate CSS</a>
     </footer>
 
-    <!-- Initialize Slick Carousel -->
+    <!-- JavaScript for Search and Carousel Functionality -->
     <script>
         $(document).ready(function() {
+            // Initialize Slick Carousel
             $('.carousel').slick({
                 dots: true,
-                infinite: true,
+                infinite: false, // Disable infinite looping for precise navigation
                 speed: 500,
                 slidesToShow: 1,
                 adaptiveHeight: true
             });
+    
+            // Autocomplete Suggestions
+            const suggestions = [
+                "Prince Ave", "Grayson", "Hopewell",
+                "amazing speed", "state champs", "game-winning touchdown",
+                "agility", "defense", "victory", "conference"
+            ];
+    
+            $("#search-input").autocomplete({
+                source: suggestions
+            });
+    
+            // Search and Navigate Functionality
+            $("#search-btn").on("click", function() {
+                const searchTerm = $("#search-input").val().toLowerCase().trim();
+                let found = false;
+    
+                $(".carousel .slide").each(function(index) {
+                    const keywords = $(this).data("keywords").toLowerCase();
+                    if (keywords.includes(searchTerm)) {
+                        // Navigate to the exact matching slide
+                        $('.carousel').slick('slickGoTo', index);
+                        found = true;
+                        return false; // Exit the loop after finding a match
+                    }
+                });
+    
+                if (!found) {
+                    alert("No matching highlight found.");
+                }
+            });
+    
+            // Reset carousel when input is cleared
+            $("#search-input").on("input", function() {
+                const searchValue = $(this).val().trim();
+                if (searchValue === "") {
+                    $('.carousel').slick('slickGoTo', 0); // Reset to the first slide
+                }
+            });
         });
     </script>
+    
+    
 </body>
 </html>
