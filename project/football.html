@@ -3,95 +3,116 @@
 <head>
     <!-- Metadata for the webpage -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="with=device-width,  initial-scale=1.0">
-    <title> CheetahXD - Christian Dixon</title><!-- Title that appears on the browser tab -->
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <title> CheetahXD - Football Highlights</title>
     <!-- Links the CSS file for styling -->
     <link rel="stylesheet" href="style1.css">
-    <!-- Preconnect to Google's font server to improve loading performance -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<!-- Links Google Font 'PT Serif' to use in the website -->
-<link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Include jQuery and jQuery-UI -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/smoothness/jquery-ui.css">
 </head>
 <body>
-	<main><!-- Main content area for the page -->
-
-<!-- Header section at the top of the page with navigation-->
+    <main>
+        <!-- Header section -->
         <section class="sub-header3">
-        <nav>
-            <!-- Logo that links to the homepage -->
-            <a href="index.html"><img src="pictures/logo.png" alt="Logo"></a>
-            <!-- Navigation links for each of the sections of the website -->
-            <div class="nav-links">
-                 <ul>
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="aboutMe.html">ABOUT ME</a></li>
-                    <li><a href="football.html">FOOTBALL</a></li>
-                    <li><a href="track.html">TRACK</a></li>
-                    <li><a href="contact.html">CONTACT</a></li>
-                </ul>
+            <nav>
+                <a href="index.html"><img src="pictures/logo.png" alt="Logo"></a>
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="aboutMe.html">ABOUT ME</a></li>
+                        <li><a href="football.html">FOOTBALL</a></li>
+                        <li><a href="track.html">TRACK</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="sub-title2">
+                <h1>Cheetah in Action: Football Highlights</h1>
             </div>
-        </nav>
-        <!-- Subtitle for football page -->
-        <div class="sub-title2">
-            <h1>Cheetah in Action: Football</h1>
-        </div>
+        </section>
 
-    </section>
+        <!-- Search and Filter Section -->
+        <section class="search-bar">
+            <input type="text" id="search-input" placeholder="Search by opponent or description...">
+            <button id="search-btn">Search</button>
+        </section>
 
-
-<!--Start of Football information-->
-<section class="football-videos">
-	 <!-- video 1 item: Game highlight from Mallard Creek vs. Prince Ave -->
-    <div class="video-item">
-        <video width="560" height="315" controls> <!--Set video view standard and does not pay automaticly-->
-            <source src="Fvideos/F1.mp4.mp4" type="video/mp4">
-            Your browser does not support the video tag.<!-- Fallback text for older browsers that do not support the <video> tag -->
-        </video>
-        <h3>Mallard Creek vs Prince Ave</h3><!-- Title of video-->
-        <p>Amazing play from the this season. Watch CheetahXD show his speed and agility on the field as he helped Creek come back to get the victory over Prince Ave.</p><!--Description providing context-->
-    </div>
-    <!-- video 2 item: Game highlight from Mallard Creek vs. Grayson -->
-    <div class="video-item">
-        <video width="560" height="315" controls>
-            <source src="Fvideos/F4.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <h3>Mallard Creek vs Grayson</h3><!-- Title of video-->
-        <p>Creek goes up aginst State-Champs, Grayson. Watch   CheetahXD use his speed aginst their intense deffense. Hard work pays off!</p><!--Description providing context-->
-    </div>
-
-    <!--video 3 item: Game highlight from Mallard Creek vs. Hopewell -->
-    <div class="video-item">
-        <video width="560" height="315" controls>
-            <source src="Fvideos/F3.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <h3>Mallard Creek vs Hopewell</h3><!-- Title of video-->
-        <p>CheetahXD scores the game-winning touchdown in the last seconds of a confrence game.</p><!--Description providing context-->
-    </div>
-</section>
-
-
-
-    
+        <!-- Football Highlights Section -->
+        <section class="football-videos">
+            <div class="video-item" data-keywords="prince ave amazing speed agility victory">
+                <video width="560" height="315" controls>
+                    <source src="Fvideos/F1.mp4.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <h3>Mallard Creek vs Prince Ave</h3>
+                <p>Amazing play from this season. Watch CheetahXD show his speed and agility on the field as he helped Creek come back to get the victory over Prince Ave.</p>
+            </div>
+            <div class="video-item" data-keywords="grayson state champs speed defense hard work">
+                <video width="560" height="315" controls>
+                    <source src="Fvideos/F4.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <h3>Mallard Creek vs Grayson</h3>
+                <p>Creek goes up against State Champs, Grayson. Watch CheetahXD use his speed against their intense defense. Hard work pays off!</p>
+            </div>
+            <div class="video-item" data-keywords="hopewell game-winning touchdown last seconds conference">
+                <video width="560" height="315" controls>
+                    <source src="Fvideos/F3.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <h3>Mallard Creek vs Hopewell</h3>
+                <p>CheetahXD scores the game-winning touchdown in the last seconds of a conference game.</p>
+            </div>
+        </section>
     </main>
 
-
-    <footer> <!-- Footer section at the bottom of the page -->
-
+    <!-- Footer Section -->
+    <footer>
         <section class="footer1">
-            <h4>Contact Me</h4><!-- heading for contact information -->
-            <p>Email: cheetahXD@gmail.com <br> Phone: 704-888-9867</p><!-- Contact details -->
+            <h4>Contact Me</h4>
+            <p>Email: cheetahXD@gmail.com <br> Phone: 704-888-9867</p>
         </section>
-        &copy;2024 CheetahXD.<br> <!-- Copyright notice -->
-        All rights reserved.<br><br>
-
-        <!-- Links for validating HTML and CSS -->
-        <a href="https://validator.w3.org/check?uri=referer" referrerpolicy="unsafe-url">Validate HTML</a> <br>
-
+        &copy;2024 CheetahXD.<br>All rights reserved.<br><br>
+        <a href="https://validator.w3.org/check?uri=referer" referrerpolicy="unsafe-url">Validate HTML</a><br>
         <a href="https://jigsaw.w3.org/css-validator/check/referer" referrerpolicy="unsafe-url">Validate CSS</a>
     </footer>
-</body>
 
+    <!-- JavaScript for Autocomplete and Search Functionality -->
+    <script>
+        $(document).ready(function() {
+            // Define keywords for autocomplete suggestions
+            const suggestions = [
+                "Prince Ave", "Grayson", "Hopewell",
+                "amazing speed", "state champs", "game-winning touchdown",
+                "agility", "defense", "victory", "conference"
+            ];
+
+            // Enable Autocomplete
+            $("#search-input").autocomplete({
+                source: suggestions
+            });
+
+            // Search Functionality
+            $("#search-btn").on("click", function() {
+                const searchTerm = $("#search-input").val().toLowerCase();
+                $(".video-item").each(function() {
+                    const keywords = $(this).data("keywords");
+                    if (keywords.includes(searchTerm)) {
+                        $(this).show();
+                    } else {
+                        $(this).hide();
+                    }
+                });
+            });
+
+            $("#search-input").on("input", function() {
+                if ($(this).val() === "") {
+                    $(".video-item").show();
+                }
+            });
+        });
+    </script>
+</body>
 </html>
