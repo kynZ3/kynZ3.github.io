@@ -3,14 +3,17 @@
 <head>
     <!-- Metadata for the webpage -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="with=device-width, initial-scale=1.0">
-    <title> CheetahXD - Football Highlights</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CheetahXD - Football Highlights</title>
     <!-- Links the CSS file for styling -->
     <link rel="stylesheet" href="style1.css">
-    <!-- Include jQuery and jQuery-UI -->
+    <!-- Include jQuery, jQuery-UI, and Slick Carousel -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </head>
 <body>
     <main>
@@ -33,37 +36,34 @@
             </div>
         </section>
 
-        <!-- Search and Filter Section -->
-        <section class="search-bar">
-            <input type="text" id="search-input" placeholder="Search by opponent or description...">
-            <button id="search-btn">Search</button>
-        </section>
-
-        <!-- Football Highlights Section -->
-        <section class="football-videos">
-            <div class="video-item" data-keywords="prince ave amazing speed agility victory">
-                <video width="560" height="315" controls>
-                    <source src="Fvideos/F1.mp4.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <h3>Mallard Creek vs Prince Ave</h3>
-                <p>Amazing play from this season. Watch CheetahXD show his speed and agility on the field as he helped Creek come back to get the victory over Prince Ave.</p>
-            </div>
-            <div class="video-item" data-keywords="grayson state champs speed defense hard work">
-                <video width="560" height="315" controls>
-                    <source src="Fvideos/F4.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <h3>Mallard Creek vs Grayson</h3>
-                <p>Creek goes up against State Champs, Grayson. Watch CheetahXD use his speed against their intense defense. Hard work pays off!</p>
-            </div>
-            <div class="video-item" data-keywords="hopewell game-winning touchdown last seconds conference">
-                <video width="560" height="315" controls>
-                    <source src="Fvideos/F3.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <h3>Mallard Creek vs Hopewell</h3>
-                <p>CheetahXD scores the game-winning touchdown in the last seconds of a conference game.</p>
+        <!-- Football Highlights Carousel Section -->
+        <section class="carousel-container">
+            <h2 class="carousel-title">Cheetah in Action: Football Highlights</h2>
+            <div class="carousel">
+                <div class="slide">
+                    <video width="100%" controls>
+                        <source src="Fvideos/F1.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <h3>Mallard Creek vs Prince Ave</h3>
+                    <p>Amazing play from this season. Watch CheetahXD show his speed and agility on the field as he helped Creek come back to get the victory over Prince Ave.</p>
+                </div>
+                <div class="slide">
+                    <video width="100%" controls>
+                        <source src="Fvideos/F4.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <h3>Mallard Creek vs Grayson</h3>
+                    <p>Creek goes up against State Champs, Grayson. Watch CheetahXD use his speed against their intense defense. Hard work pays off!</p>
+                </div>
+                <div class="slide">
+                    <video width="100%" controls>
+                        <source src="Fvideos/F3.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <h3>Mallard Creek vs Hopewell</h3>
+                    <p>CheetahXD scores the game-winning touchdown in the last seconds of a conference game.</p>
+                </div>
             </div>
         </section>
     </main>
@@ -79,38 +79,15 @@
         <a href="https://jigsaw.w3.org/css-validator/check/referer" referrerpolicy="unsafe-url">Validate CSS</a>
     </footer>
 
-    <!-- JavaScript for Autocomplete and Search Functionality -->
+    <!-- Initialize Slick Carousel -->
     <script>
         $(document).ready(function() {
-            // Define keywords for autocomplete suggestions
-            const suggestions = [
-                "Prince Ave", "Grayson", "Hopewell",
-                "amazing speed", "state champs", "game-winning touchdown",
-                "agility", "defense", "victory", "conference"
-            ];
-
-            // Enable Autocomplete
-            $("#search-input").autocomplete({
-                source: suggestions
-            });
-
-            // Search Functionality
-            $("#search-btn").on("click", function() {
-                const searchTerm = $("#search-input").val().toLowerCase();
-                $(".video-item").each(function() {
-                    const keywords = $(this).data("keywords");
-                    if (keywords.includes(searchTerm)) {
-                        $(this).show();
-                    } else {
-                        $(this).hide();
-                    }
-                });
-            });
-
-            $("#search-input").on("input", function() {
-                if ($(this).val() === "") {
-                    $(".video-item").show();
-                }
+            $('.carousel').slick({
+                dots: true,
+                infinite: true,
+                speed: 500,
+                slidesToShow: 1,
+                adaptiveHeight: true
             });
         });
     </script>
