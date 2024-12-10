@@ -143,6 +143,7 @@ $("#fetchQuoteBtn").click(function () {
 
 
 $(document).ready(function () {
+    // Autocomplete Suggestions
     const suggestions = [
         "2023 JDL",
         "2023 Liberty University Invitational",
@@ -152,7 +153,7 @@ $(document).ready(function () {
         "record national finish line",
     ];
 
-    // Autocomplete Functionality
+    // Enable Autocomplete
     $("#search-input").autocomplete({
         source: suggestions,
     });
@@ -162,6 +163,7 @@ $(document).ready(function () {
         const searchTerm = $("#search-input").val().toLowerCase().trim();
         let found = false;
 
+        // Loop through video items to search
         $(".video-item").each(function () {
             const keywords = $(this).data("keywords").toLowerCase();
             if (keywords.includes(searchTerm)) {
@@ -172,13 +174,16 @@ $(document).ready(function () {
             }
         });
 
-        
+        // If no matching video is found, show an alert
+        if (!found) {
+            alert("No matching highlight found.");
+        }
     });
 
-    // Reset view when input is cleared
+    // Reset all videos when search input is cleared
     $("#search-input").on("input", function () {
         if ($(this).val().trim() === "") {
-            $(".video-item").show();
+            $(".video-item").show(); // Show all videos
         }
     });
 });
