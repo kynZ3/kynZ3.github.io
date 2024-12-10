@@ -3,78 +3,80 @@
 <head>
     <!-- Metadata for the webpage -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CheetahXD - Christian Dixon</title>
+    <meta name="viewport" content="with=device-width,  initial-scale=1.0">
+    <title> CheetahXD - Christian Dixon</title><!-- Title that appears on the browser tab -->
     <!-- Links the CSS file for styling -->
     <link rel="stylesheet" href="style1.css">
     <!-- Preconnect to Google's font server to improve loading performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Links Google Font 'PT Serif' to use in the website -->
-    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
-    <!-- jQuery UI CSS for Autocomplete -->
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/smoothness/jquery-ui.css">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- Links Google Font 'PT Serif' to use in the website -->
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <main>
-        <!-- Header section at the top of the page with navigation-->
-        <section class="sub-header4">
-            <nav>
-                <!-- Logo that links to the homepage -->
-                <a href="index.html"><img src="pictures/logo.png" alt="Logo"></a>
-                <!-- Navigation links for each of the sections of the website -->
-                <div class="nav-links">
-                    <ul>
-                        <li><a href="index.html">HOME</a></li>
-                        <li><a href="aboutMe.html">ABOUT ME</a></li>
-                        <li><a href="football.html">FOOTBALL</a></li>
-                        <li><a href="track.html">TRACK</a></li>
-                        <li><a href="contact.html">CONTACT</a></li>
-                    </ul>
-                </div>
-            </nav>
-            <!-- Subtitle for track page -->
-            <div class="sub-title4">
-                <h1>Cheetah in Action: Track</h1><!-- Main heading-->
-            </div>
-        </section>
+    <main><!-- Main content area for the page -->
 
-        <!-- Search Bar -->
-        <section class="search-bar">
-            <input type="text" id="search-input" placeholder="Search by meet or description...">
-            <button id="search-btn">Search</button>
-        </section>
+<!-- Header section at the top of the page with navigation-->
+    <section class="sub-header4">
+        <nav>
+            <!-- Logo that links to the homepage -->
+            <a href="index.html"><img src="pictures/logo.png" alt="Logo"></a>
+            <!-- Navigation links for each of the sections of the website -->
+            <div class="nav-links">
+                 <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="aboutMe.html">ABOUT ME</a></li>
+                    <li><a href="football.html">FOOTBALL</a></li>
+                    <li><a href="track.html">TRACK</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Subtitle for track page -->
+        
+        <div class="sub-title4">
+            <h1>Cheetah in Action: Track</h1><!-- Main heading-->
+        </div>
 
-        <!-- Start of Track information -->
-        <section class="football-videos">
-            <!-- Video 1 item -->
-            <div class="video-item" data-keywords="2023 JDL heat first">
-                <video width="560" height="315" controls>
-                    <source src="Tvideos/T2.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <h3>2023 JDL</h3>
-                <p>Watch as Cheetah places 1st in his heat!</p>
-            </div>
-            <!-- Video 2 item -->
-            <div class="video-item" data-keywords="2023 Liberty University Invitational Virginia meet">
-                <video width="560" height="315" controls>
-                    <source src="Tvideos/T1.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <h3>2023 Liberty University Invitational</h3>
-                <p>CheetahXD takes his speed to Virginia to show his opponents how to win a meet!</p>
-            </div>
-            <!-- Video 3 item -->
-            <div class="video-item" data-keywords="2022 Dream Team record national finish line">
-                <video width="560" height="315" controls>
-                    <source src="Tvideos/t3.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <h3>2022 Dream Team</h3>
-                <p>Creek crushes the meet record and ranks nationally. Watch how Cheetah just glides into the finish line!</p>
-            </div>
-        </section>
+    </section>
+
+<!--Start of Track information-->
+<section class="football-videos">
+   <!-- video 1 item: track meet in Winston-Salam  -->
+    <div class="video-item">
+        <video width="560" height="315" controls> <!--Set video view standard and does not pay automaticly-->
+            <source src="Tvideos/T2.mp4" type="video/mp4">
+            Your browser does not support the video tag.<!-- Fallback text for older browsers that do not support the <video> tag -->
+        </video>
+        <h3>2023 JDL</h3><!-- Title of video-->
+        <p>Watch as Cheetah places 1st in his heat!</p><!--Description providing context-->
+    </div>
+    <!-- video 2 item: Meet in Virgina-->
+    <div class="video-item">
+        <video width="560" height="315" controls>
+            <source src="Tvideos/T1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <h3>2023 Liberty Univeristy Invitational</h3><!-- Title of video-->
+        <p>CheetahXD takes his speed to Virgina to show his opponets how to win a meet!</p><!--Description providing context-->
+    </div>
+
+    <!--video 3 item: another meet in Virgina -->
+    <div class="video-item">
+        <video width="560" height="315" controls>
+            <source src="Tvideos/t3.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <h3>2022 Dream Team</h3><!-- Title of video-->
+        <p>Creek crushes the meet record and ranks nationally. Watch how Cheeah just glides into the finish line!</p><!--Description providing context-->
+    </div>
+</section>
+
+
+
+
+
+
     </main>
 
     <!-- Footer Section -->
@@ -88,9 +90,7 @@
         <a href="https://jigsaw.w3.org/css-validator/check/referer" referrerpolicy="unsafe-url">Validate CSS</a>
     </footer>
 
-    <!-- Link to external JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
-    <script src="javascript.js"></script>
+
+    
 </body>
 </html>
