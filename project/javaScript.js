@@ -69,54 +69,52 @@ $(document).ready(function() {
 
 /*JS for Search + Carousel */ 
         $(document).ready(function() {
-            // Initialize Slick Carousel
-            $('.carousel').click({
-                dots: true,
-                infinite: false, // Disable infinite looping for precise navigation
-                speed: 500,
-                slidesToShow: 1,
-                adaptiveHeight: true
-            });
-    
-            // Autocomplete Suggestions
-            const suggestions = [
-                "Prince Ave", "Grayson", "Hopewell",
-                "amazing speed", "state champs", "game-winning touchdown",
-                "agility", "defense", "victory", "conference"
-            ];
-    
-            $("#search-input").autocomplete({
-                source: suggestions
-            });
-    
-            // Search bar function
-            $("#search-btn").on("click", function() {
-                const searchTerm = $("#search-input").val().toLowerCase().trim();
-                let found = false;
-    
-                $(".carousel .slide").each(function(index) {
-                    const keywords = $(this).data("keywords").toLowerCase();
-                    if (keywords.includes(searchTerm)) {
-                        // Navigate to the exact matching slide
-                        $('.carousel').slick('slickGoTo', index);
-                        found = true;
-                        return false; // Exit the loop after finding a match
-                    }
-                });
-    
-                if (!found) {
-                    alert("No matching highlight found.");
-                }
-            });
-    
-            // Reset carousel when input is cleared
-            $("#search-input").on("input", function() {
-                const searchValue = $(this).val().trim();
-                if (searchValue === "") {
-                    $('.carousel').slick('slickGoTo', 0); // Reset to the first slide
-                }
-            });
+    // Initialize Slick Carousel
+    $('.carousel').slick({
+        dots: true,
+        infinite: false,
+        speed: 500,
+        slidesToShow: 1,
+        adaptiveHeight: true
+    });
+
+    // Autocomplete Suggestions
+    const suggestions = [
+        "prince ave", "grayson", "hopewell",
+        "amazing speed", "state champs", "game-winning touchdown",
+        "agility", "defense", "victory", "conference"
+    ];
+
+    $("#search-input").autocomplete({
+        source: suggestions
+    });
+
+    // Search Functionality
+    $("#search-btn").on("click", function() {
+        const searchTerm = $("#search-input").val().toLowerCase().trim();
+        let found = false;
+
+        $(".carousel .slide").each(function(index) {
+            const keywords = $(this).data("keywords").toLowerCase();
+            if (keywords.includes(searchTerm)) {
+                $('.carousel').slick('slickGoTo', index);
+                found = true;
+                return false; // Exit the loop
+            }
         });
+
+        if (!found) {
+            alert("No matching highlight found.");
+        }
+    });
+
+    // Reset carousel when input is cleared
+    $("#search-input").on("input", function() {
+        if ($(this).val().trim() === "") {
+            $('.carousel').slick('slickGoTo', 0); // Reset to the first slide
+        }
+    });
+});
 
 
 
