@@ -16,56 +16,6 @@ $(document).ready(function() {
 
 
 
-
-// JavaScript for Autocomplete and Search Functionality
-// This is js for the search bar on the track page
-$(document).ready(function () {
-    // Define keywords for autocomplete suggestions
-    const trackSuggestions = [
-        "2023 JDL",
-        "2023 Liberty University Invitational",
-        "2022 Dream Team",
-        "heat first",
-        "Virginia meet",
-        "record national finish line"
-    ];
-
-    // Enable Autocomplete
-    $("#search-input").autocomplete({
-        source: trackSuggestions,
-    });
-
-    // Search Functionality
-    $("#search-btn").on("click", function () {
-        const searchTerm = $("#search-input").val().toLowerCase().trim();
-        let found = false;
-
-        $(".video-item").each(function () {
-            const keywords = $(this).data("keywords").toLowerCase();
-            if (keywords.includes(searchTerm)) {
-                $(this).show();
-                found = true;
-            } else {
-                $(this).hide();
-            }
-        });
-
-        // If no matching video is found, show an alert
-        if (!found) {
-            alert("No matching highlight found.");
-        }
-    });
-
-    // Reset all videos when search input is cleared
-    $("#search-input").on("input", function () {
-        if ($(this).val().trim() === "") {
-            $(".video-item").show(); // Show all videos
-        }
-    });
-});
-
-
-
 // JavaScript for Autocomplete and Search Functionality
 // This is js for the search bar on the football page
 
@@ -190,6 +140,5 @@ $("#fetchQuoteBtn").click(function () {
         }
     });
 });
-
 
 
