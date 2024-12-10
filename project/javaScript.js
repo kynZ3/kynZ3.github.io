@@ -142,20 +142,22 @@ $("#fetchQuoteBtn").click(function () {
 });
 
 
+// JavaScript for Autocomplete and Search Functionality
+// This is js for the search bar on the track page
 $(document).ready(function () {
-    // Autocomplete Suggestions
-    const suggestions = [
+    // Define keywords for autocomplete suggestions
+    const trackSuggestions = [
         "2023 JDL",
         "2023 Liberty University Invitational",
         "2022 Dream Team",
         "heat first",
         "Virginia meet",
-        "record national finish line",
+        "record national finish line"
     ];
 
     // Enable Autocomplete
     $("#search-input").autocomplete({
-        source: suggestions,
+        source: trackSuggestions,
     });
 
     // Search Functionality
@@ -163,7 +165,6 @@ $(document).ready(function () {
         const searchTerm = $("#search-input").val().toLowerCase().trim();
         let found = false;
 
-        // Loop through video items to search
         $(".video-item").each(function () {
             const keywords = $(this).data("keywords").toLowerCase();
             if (keywords.includes(searchTerm)) {
@@ -187,3 +188,4 @@ $(document).ready(function () {
         }
     });
 });
+
