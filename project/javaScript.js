@@ -110,3 +110,26 @@ $("#fetchQuoteBtn").click(function () {
         }
     });
 });
+
+document.getElementById("fetchQuoteBtn").addEventListener("click", function () {
+    const proxyUrl = "https://cors-anywhere.herokuapp.com/";
+    const apiUrl = "https://api.api-ninjas.com/v1/quotes?category=inspirational";
+
+    fetch(proxyUrl + apiUrl, {
+        headers: { "X-Api-Key": "r8+zkVFFEDo7j95LBv18cw==L8WsTigzxfw8G8Y9" }
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data && data.length > 0) {
+            document.getElementById("quote").innerText = `"${data[0].quote}"`;
+            document.getElementById("author").innerText = `- ${data[0].author}`;
+        } else {
+            document.getElementById("quote").innerText = "No quotes found. Try again later.";
+        }
+    })
+    .catch(error => {
+        console.error("Error fetching quote:", error);
+        document.getElementById("quote").innerText = "Error retrieving quote. Try again later.";
+    });
+});
+
