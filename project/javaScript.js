@@ -140,3 +140,45 @@ $("#fetchQuoteBtn").click(function () {
         }
     });
 });
+
+
+$(document).ready(function () {
+    const suggestions = [
+        "2023 JDL",
+        "2023 Liberty University Invitational",
+        "2022 Dream Team",
+        "heat first",
+        "Virginia meet",
+        "record national finish line",
+    ];
+
+    // Autocomplete Functionality
+    $("#search-input").autocomplete({
+        source: suggestions,
+    });
+
+    // Search Functionality
+    $("#search-btn").on("click", function () {
+        const searchTerm = $("#search-input").val().toLowerCase().trim();
+        let found = false;
+
+        $(".video-item").each(function () {
+            const keywords = $(this).data("keywords").toLowerCase();
+            if (keywords.includes(searchTerm)) {
+                $(this).show();
+                found = true;
+            } else {
+                $(this).hide();
+            }
+        });
+
+        
+    });
+
+    // Reset view when input is cleared
+    $("#search-input").on("input", function () {
+        if ($(this).val().trim() === "") {
+            $(".video-item").show();
+        }
+    });
+});
