@@ -94,15 +94,16 @@ $(document).ready(function () {
 
 //To get inspirational quotes
 
+var category = 'inspirational'
 $("#fetchQuoteBtn").click(function () {
     $.ajax({
         method: 'GET',
-        url: 'https://api.quotable.io/random',
+        url: 'https://api.api-ninjas.com/v1/quotes?category=' + category,
+        headers: { 'X-Api-Key': 'r8+zkVFFEDo7j95LBv18cw==L8WsTigzxfw8G8Y9'},
+        contentType: 'application/json',
         success: function(result) {
-            // Update the quote and author text
-            $("#quote").text(result.content);
-            $("#author").text("- " + result.author);
-            console.log(result.content);
+            $("#quote").text(result[0].quote)
+            console.log(result[0].quote);
         },
         error: function ajaxError(jqXHR) {
             console.error('Error: ', jqXHR.responseText);
