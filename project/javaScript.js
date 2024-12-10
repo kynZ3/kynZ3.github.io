@@ -94,42 +94,18 @@ $(document).ready(function () {
 
 //To get inspirational quotes
 
-var category = 'inspirational'
 $("#fetchQuoteBtn").click(function () {
     $.ajax({
         method: 'GET',
-        url: 'https://api.api-ninjas.com/v1/quotes?category=' + category,
-        headers: { 'X-Api-Key': 'r8+zkVFFEDo7j95LBv18cw==L8WsTigzxfw8G8Y9'},
-        contentType: 'application/json',
+        url: 'https://api.quotable.io/random',
         success: function(result) {
-            $("#quote").text(result[0].quote)
-            console.log(result[0].quote);
+            // Update the quote and author text
+            $("#quote").text(result.content);
+            $("#author").text("- " + result.author);
+            console.log(result.content);
         },
         error: function ajaxError(jqXHR) {
             console.error('Error: ', jqXHR.responseText);
         }
     });
 });
-
-document.getElementById("fetchQuoteBtn").addEventListener("click", function () {
-    const proxyUrl = "https://cors-anywhere.herokuapp.com/";
-    const apiUrl = "https://api.api-ninjas.com/v1/quotes?category=inspirational";
-
-    fetch(proxyUrl + apiUrl, {
-        headers: { "X-Api-Key": "r8+zkVFFEDo7j95LBv18cw==L8WsTigzxfw8G8Y9" }
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data && data.length > 0) {
-            document.getElementById("quote").innerText = `"${data[0].quote}"`;
-            document.getElementById("author").innerText = `- ${data[0].author}`;
-        } else {
-            document.getElementById("quote").innerText = "No quotes found. Try again later.";
-        }
-    })
-    .catch(error => {
-        console.error("Error fetching quote:", error);
-        document.getElementById("quote").innerText = "Error retrieving quote. Try again later.";
-    });
-});
-
