@@ -93,19 +93,24 @@ $(document).ready(function () {
     }
 
     // Fetch Inspirational Quotes
-    const category = "inspirational";
+    
     $("#fetchQuoteBtn").click(function () {
-        $.ajax({
-            method: "GET",
-            url: `https://api.api-ninjas.com/v1/quotes?category=${category}`,
-            headers: { "X-Api-Key": "r8+zkVFFEDo7j95LBv18cw==L8WsTigzxfw8G8Y9" },
-            contentType: "application/json",
-            success: function (result) {
-                $("#quote").text(result[0].quote);
-                console.log(result[0].quote);
-            },
-            error: function ajaxError(jqXHR) {
-                console.error("Error: ", jqXHR.responseText);
+    const category = "inspirational";
+    $.ajax({
+        method: "GET",
+        url: `https://api.api-ninjas.com/v1/quotes?category=${category}`,
+        headers: { "X-Api-Key": "r8+zkVFFEDo7j95LBv18cw==L8WsTigzxfw8G8Y9" },
+        success: function (result) {
+            if (result && result.length > 0) {
+                $("#quote").text(`"${result[0].quote}"`);
+                $("#author").text(`- ${result[0].author}`);
+            } else {
+                $("#quote").text("No quotes found. Please try again later.");
+            }
+        },
+        error: function (jqXHR) {
+            console.error("Error fetching quote:", jqXHR.responseText);
+            $("#quote").text("Error retrieving quote. Try again later.");
             },
         });
     });
