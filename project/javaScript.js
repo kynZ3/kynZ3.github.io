@@ -68,7 +68,7 @@ $(document).ready(function() {
 
 
 /*JS for Search + Carousel */ 
-        $(document).ready(function() {
+$(document).ready(function() {
     // Initialize Slick Carousel
     $('.carousel').slick({
         dots: true,
@@ -115,6 +115,7 @@ $(document).ready(function() {
         }
     });
 });
+
 
 
 
